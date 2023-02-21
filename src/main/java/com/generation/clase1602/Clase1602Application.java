@@ -262,6 +262,18 @@ public class Clase1602Application {
 					}
 					
 				}
+			}else if(opcion == 3){
+				Double sumaPromedio = 0.0;
+				for(String i : libroClase.keySet()){
+					sumaPromedio = sumaPromedio + promedioNotas(libroClase.get(i));
+					
+				}
+				Double promedioGeneral = sumaPromedio / cantAlum;
+				for(String i : libroClase.keySet()){
+					sobrePromedio(promedioGeneral, libroClase.get(i), i);
+				}
+			}else{
+				System.out.println("Gracias por cerrar el menú, hasta pronto :D");
 			}
 
 		}
